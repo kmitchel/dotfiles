@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Betaflight Slack
+Exec=/usr/bin/google-chrome-stable --app="https://app.slack.com/client/T221J1F6J/GF81W4A1E"
+Icon=google-chrome
+Type=Application
+Terminal=false

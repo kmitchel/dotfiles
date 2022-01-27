@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=GMail
+Exec=/usr/bin/google-chrome-stable --app="https://mail.google.com/mail/u/0/#inbox"
+Icon=google-chrome
+Type=Application
+Terminal=false

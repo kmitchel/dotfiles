@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Youtube Music
+Exec=/usr/bin/google-chrome-stable --app="https://music.youtube.com"
+Icon=google-chrome
+Type=Application
+Terminal=false

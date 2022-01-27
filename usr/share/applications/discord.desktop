@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Name=Discord
+Exec=/usr/bin/google-chrome-stable --app="https://discord.com/channels/@me"
+Icon=google-chrome
+Type=Application
+Terminal=false
