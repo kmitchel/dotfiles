@@ -288,3 +288,8 @@ client.background       $bg
 
 for_window [class=".*"] border pixel 0
 focus_follows_mouse no
+
+bindsym $mod+b       exec sudo isw -b on
+bindsym $mod+shift+b exec sudo isw -b off
+
+bindsym $mod+g       exec google-chrome-stable
