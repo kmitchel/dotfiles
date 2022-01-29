@@ -27,7 +27,8 @@ font pango:monospace 14
 #font pango:DejaVu Sans Mono 8
 
 # start a terminal. We use kitty.
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -48,7 +49,8 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run -theme Monokai
 
 # Launch Polybar. Take a look at ~/.confi/polybar/config to
 # configure the bar.
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id polybar --reload alg-example
 
 # Display Wallpaper, always.
 #exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/i3/wall.png
@@ -57,7 +59,7 @@ exec_always --no-startup-id wal -qR
 gaps inner 10
 
 #Compositor. This helps in transparency and fading.
-exec_always picom -f
+exec --no-startup-id picom -b --config $HOME/.config/picom/picom.conf --xrender-sync-fence
 
 # Lock Screen This will yield a black lock screen, which
 # can be customized to your liking.
@@ -86,6 +88,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l --nof
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # We use this. System dark theme is applied to it.
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 
 # Use pactl to adjust volume in PulseAudio.
 # These are examples if you would like to use pactl. We will not use this,
@@ -203,7 +206,8 @@ bindsym $mod+Shift+c reload
 # 12B] restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # 12C] exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit
 
 # 13A] resize window (you can also use the mouse for that)
 mode "resize" {
