@@ -50,7 +50,7 @@ bindsym $mod+Shift+d exec --no-startup-id rofi -show run -theme Monokai
 # Launch Polybar. Take a look at ~/.confi/polybar/config to
 # configure the bar.
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec --no-startup-id polybar --reload alg-example
+exec --no-startup-id polybar --reload i3bar
 
 # Display Wallpaper, always.
 #exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/i3/wall.png

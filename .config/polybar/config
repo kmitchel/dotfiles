@@ -25,7 +25,7 @@ primary = ${xrdb:color3:#222}
 secondary = ${xrdb:color4:#222}
 alert = ${xrdb:color5:#222}
 
-[bar/alg-example]
+[bar/i3bar]
 background = ${colors.background}
 foreground = ${colors.foreground}
 
@@ -84,15 +84,17 @@ use-actual-brightness = true
 enable-scroll = true
 format = <label>
 label = %percentage:3%%
-format-prefix = " "
+label-minlen = 5
+label-alignment = right
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 
 [module/cpu]
 type = internal/cpu
-interval = 2
+interval = 0.5
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-label-minlen = 3
+label-minlen = 5
 label-alignment = right
 label = %percentage:3%%
 
@@ -136,6 +138,7 @@ type = internal/battery
 battery = BAT1
 adapter = ADP1
 full-at = 98
+poll-interval = 5
 
 format-charging = <animation-charging> <label-charging>
 
@@ -143,6 +146,11 @@ format-discharging = <animation-discharging> <label-discharging>
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
+
+label-charging-minlen = 4
+label-charging-alignment = right
+label-discharging-minlen = 4
+label-discharging-alignment = right
 
 ramp-capacity-0 = 
 ramp-capacity-1 =  
