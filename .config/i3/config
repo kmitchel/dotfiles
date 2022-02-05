@@ -82,7 +82,7 @@ bindsym $mod+x exec betterlockscreen -l blur
 
 # The 4 lines of text above come from i3 documentation. Waking up from a suspended
 # system will launch betterlockscreen
-exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l blur --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l blur
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -297,4 +297,4 @@ bindsym $mod+b       exec sudo isw -b on
 bindsym $mod+shift+b exec sudo isw -b off
 
 bindsym $mod+g exec Exec=env VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/intel_icd.x86_64.json /usr/bin/google-chrome-stable
-exec --no-startup-id xinput set-prop 13 359 1
+#exec --no-startup-id xinput set-prop 13 359 1
