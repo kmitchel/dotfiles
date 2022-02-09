@@ -63,7 +63,7 @@ exec --no-startup-id picom -b --config $HOME/.config/picom/picom.conf --xrender-
 
 # Lock Screen This will yield a black lock screen, which
 # can be customized to your liking.
-bindsym $mod+x exec betterlockscreen -l blur
+bindsym $mod+x exec loginctl lock-session
 
 # Shutdown the computer
 #bindsym $mod+Shift+s exec shutdown now

@@ -35,7 +35,7 @@ padding-right = 2
 module-margin-left = 2
 
 font-0 = DejaVu Sans Condensed:pixelsize=14;2
-font-1 = FontAwesome5Free:style=Solid:size=12;2
+font-1 = FontAwesome6Free:style=Solid:size=12;2
 
 modules-left = i3 xwindow
 modules-right = alsa backlight cpu temperature battery date powermenu
@@ -95,7 +95,7 @@ format-prefix-foreground = ${colors.foreground-alt}
 [module/cpu]
 type = internal/cpu
 interval = 0.5
-format-prefix = ""
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 label-minlen = 4
 label-alignment = right
