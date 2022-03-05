@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Name=Discord
-Exec=/usr/bin/google-chrome-stable --app="https://discord.com/app"
+Exec=/usr/bin/google-chrome-stable --app="https://discord.com/login"
 Icon=google-chrome
 Type=Application
 Terminal=false
