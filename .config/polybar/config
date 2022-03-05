@@ -29,13 +29,14 @@ alert = ${xrdb:color5:#222}
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
-padding-right = 2
+line-size = 2
+padding-right = 1
 
-module-margin-left = 2
+module-margin-right = 1
 
 font-0 = LiberationMono:pixelsize=12;2
-font-1 = FontAwesome6Free:style=Solid:size=10;2
+font-1 = UnifontUpper:size=12;2
+font-2 = FontAwesome6Free:style=Solid:size=10;2
 
 modules-left = i3 xwindow
 modules-right = alsa backlight cpu temperature battery date powermenu
@@ -85,20 +86,20 @@ type = internal/backlight
 card = intel_backlight
 use-actual-brightness = true
 enable-scroll = true
-format = <label>
+format = <ramp><label>
 label = %percentage:3%%
-label-minlen = 5
-label-alignment = right
-format-prefix = ""
-format-prefix-foreground = ${colors.foreground-alt}
+ramp-foreground = ${colors.foreground-alt}
+ramp-0 = 🌕
+ramp-1 = 🌔
+ramp-2 = 🌓
+ramp-3 = 🌒
+ramp-4 = 🌑
 
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-label-minlen = 4
-label-alignment = right
 label = %percentage:3%%
 
 [module/date]
@@ -119,13 +120,9 @@ label = %date% %time%
 [module/alsa]
 type = internal/alsa
 
-format-volume = <ramp-volume> <label-volume>
+format-volume = <ramp-volume><label-volume>
 label-volume = %percentage:3%%
-;label-volume-minlen = 3
-label-volume-alignment = right
 label-volume-foreground = ${root.foreground}
-;format-volume-prefix = " "
-;format-volume-prefix-foreground = ${colors.foreground-alt}
 
 format-muted-prefix = " "
 format-muted-prefix-foreground = ${colors.foreground-alt}
@@ -143,17 +140,14 @@ adapter = ADP1
 full-at = 98
 poll-interval = 5
 
-format-charging = <animation-charging> <label-charging>
-
-format-discharging = <animation-discharging> <label-discharging>
+format-charging = <animation-charging><label-charging>
+format-discharging = <animation-discharging><label-discharging>
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
 
-label-charging-minlen = 3
-label-charging-alignment = right
-label-discharging-minlen = 3
-label-discharging-alignment = right
+label-charging = %percentage:3%%
+label-discharging = %percentage:3%%
 
 ramp-capacity-0 = 
 ramp-capacity-1 =  
@@ -193,8 +187,9 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = #f00
 
-ramp-0 =  
-ramp-1 =  
+ramp-0 = _
+ramp-1 =  
+ramp-2 =  
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
@@ -237,8 +232,6 @@ menu-4-0-exec = reboot
 
 menu-5-0 = power off
 menu-5-0-exec = poweroff
-
-
 
 [settings]
 screenchange-reload = true

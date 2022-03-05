@@ -55,7 +55,9 @@ exec --no-startup-id polybar --reload i3bar
 # Display Wallpaper, always.
 #exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/i3/wall.png
 exec_always --no-startup-id wal -qR
+
 # Provide Gaps to Windows. Increase/Decrease as you like.
+smart_gaps on
 gaps inner 10
 
 #Compositor. This helps in transparency and fading.
